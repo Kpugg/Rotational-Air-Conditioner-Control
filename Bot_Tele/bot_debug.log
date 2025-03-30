@@ -1,0 +1,150 @@
+2025-03-30 18:48:50,706 - ERROR - No error handlers are registered, logging exception.
+Traceback (most recent call last):
+  File "C:\Users\DANG KHANH\AppData\Local\Programs\Python\Python38\lib\site-packages\telegram\ext\_updater.py", line 753, in _network_loop_retry
+    if not await do_action():
+  File "C:\Users\DANG KHANH\AppData\Local\Programs\Python\Python38\lib\site-packages\telegram\ext\_updater.py", line 747, in do_action
+    return action_cb_task.result()
+  File "C:\Users\DANG KHANH\AppData\Local\Programs\Python\Python38\lib\site-packages\telegram\ext\_updater.py", line 377, in polling_action_cb
+    updates = await self.bot.get_updates(
+  File "C:\Users\DANG KHANH\AppData\Local\Programs\Python\Python38\lib\site-packages\telegram\ext\_extbot.py", line 649, in get_updates
+    updates = await super().get_updates(
+  File "C:\Users\DANG KHANH\AppData\Local\Programs\Python\Python38\lib\site-packages\telegram\_bot.py", line 4366, in get_updates
+    await self._post(
+  File "C:\Users\DANG KHANH\AppData\Local\Programs\Python\Python38\lib\site-packages\telegram\_bot.py", line 623, in _post
+    return await self._do_post(
+  File "C:\Users\DANG KHANH\AppData\Local\Programs\Python\Python38\lib\site-packages\telegram\ext\_extbot.py", line 355, in _do_post
+    return await super()._do_post(
+  File "C:\Users\DANG KHANH\AppData\Local\Programs\Python\Python38\lib\site-packages\telegram\_bot.py", line 652, in _do_post
+    result = await request.post(
+  File "C:\Users\DANG KHANH\AppData\Local\Programs\Python\Python38\lib\site-packages\telegram\request\_baserequest.py", line 201, in post
+    result = await self._request_wrapper(
+  File "C:\Users\DANG KHANH\AppData\Local\Programs\Python\Python38\lib\site-packages\telegram\request\_baserequest.py", line 384, in _request_wrapper
+    raise Conflict(message)
+telegram.error.Conflict: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2025-03-30 18:49:45,797 - ERROR - No error handlers are registered, logging exception.
+Traceback (most recent call last):
+  File "C:\Users\DANG KHANH\AppData\Local\Programs\Python\Python38\lib\site-packages\telegram\ext\_updater.py", line 753, in _network_loop_retry
+    if not await do_action():
+  File "C:\Users\DANG KHANH\AppData\Local\Programs\Python\Python38\lib\site-packages\telegram\ext\_updater.py", line 747, in do_action
+    return action_cb_task.result()
+  File "C:\Users\DANG KHANH\AppData\Local\Programs\Python\Python38\lib\site-packages\telegram\ext\_updater.py", line 377, in polling_action_cb
+    updates = await self.bot.get_updates(
+  File "C:\Users\DANG KHANH\AppData\Local\Programs\Python\Python38\lib\site-packages\telegram\ext\_extbot.py", line 649, in get_updates
+    updates = await super().get_updates(
+  File "C:\Users\DANG KHANH\AppData\Local\Programs\Python\Python38\lib\site-packages\telegram\_bot.py", line 4366, in get_updates
+    await self._post(
+  File "C:\Users\DANG KHANH\AppData\Local\Programs\Python\Python38\lib\site-packages\telegram\_bot.py", line 623, in _post
+    return await self._do_post(
+  File "C:\Users\DANG KHANH\AppData\Local\Programs\Python\Python38\lib\site-packages\telegram\ext\_extbot.py", line 355, in _do_post
+    return await super()._do_post(
+  File "C:\Users\DANG KHANH\AppData\Local\Programs\Python\Python38\lib\site-packages\telegram\_bot.py", line 652, in _do_post
+    result = await request.post(
+  File "C:\Users\DANG KHANH\AppData\Local\Programs\Python\Python38\lib\site-packages\telegram\request\_baserequest.py", line 201, in post
+    result = await self._request_wrapper(
+  File "C:\Users\DANG KHANH\AppData\Local\Programs\Python\Python38\lib\site-packages\telegram\request\_baserequest.py", line 384, in _request_wrapper
+    raise Conflict(message)
+telegram.error.Conflict: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2025-03-30 18:50:20,818 - ERROR - No error handlers are registered, logging exception.
+Traceback (most recent call last):
+  File "bot.py", line 89, in process_ai_question
+    response = openai.ChatCompletion.create(
+  File "C:\Users\DANG KHANH\AppData\Local\Programs\Python\Python38\lib\site-packages\openai\lib\_old_api.py", line 39, in __call__
+    raise APIRemovedInV1(symbol=self._symbol)
+openai.lib._old_api.APIRemovedInV1: 
+
+You tried to access openai.ChatCompletion, but this is no longer supported in openai>=1.0.0 - see the README at https://github.com/openai/openai-python for the API.
+
+You can run `openai migrate` to automatically upgrade your codebase to use the 1.0.0 interface. 
+
+Alternatively, you can pin your installation to the old version, e.g. `pip install openai==0.28`
+
+A detailed migration guide is available here: https://github.com/openai/openai-python/discussions/742
+
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\DANG KHANH\AppData\Local\Programs\Python\Python38\lib\site-packages\telegram\ext\_application.py", line 1335, in process_update
+    await coroutine
+  File "C:\Users\DANG KHANH\AppData\Local\Programs\Python\Python38\lib\site-packages\telegram\ext\_handlers\conversationhandler.py", line 857, in handle_update
+    new_state: object = await handler.handle_update(
+  File "C:\Users\DANG KHANH\AppData\Local\Programs\Python\Python38\lib\site-packages\telegram\ext\_handlers\basehandler.py", line 158, in handle_update
+    return await self.callback(update, context)
+  File "bot.py", line 105, in process_ai_question
+    except openai.error.RateLimitError:
+AttributeError: module 'openai' has no attribute 'error'
+2025-03-30 18:50:48,676 - ERROR - No error handlers are registered, logging exception.
+Traceback (most recent call last):
+  File "bot.py", line 89, in process_ai_question
+    response = openai.ChatCompletion.create(
+  File "C:\Users\DANG KHANH\AppData\Local\Programs\Python\Python38\lib\site-packages\openai\lib\_old_api.py", line 39, in __call__
+    raise APIRemovedInV1(symbol=self._symbol)
+openai.lib._old_api.APIRemovedInV1: 
+
+You tried to access openai.ChatCompletion, but this is no longer supported in openai>=1.0.0 - see the README at https://github.com/openai/openai-python for the API.
+
+You can run `openai migrate` to automatically upgrade your codebase to use the 1.0.0 interface. 
+
+Alternatively, you can pin your installation to the old version, e.g. `pip install openai==0.28`
+
+A detailed migration guide is available here: https://github.com/openai/openai-python/discussions/742
+
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\DANG KHANH\AppData\Local\Programs\Python\Python38\lib\site-packages\telegram\ext\_application.py", line 1335, in process_update
+    await coroutine
+  File "C:\Users\DANG KHANH\AppData\Local\Programs\Python\Python38\lib\site-packages\telegram\ext\_handlers\conversationhandler.py", line 857, in handle_update
+    new_state: object = await handler.handle_update(
+  File "C:\Users\DANG KHANH\AppData\Local\Programs\Python\Python38\lib\site-packages\telegram\ext\_handlers\basehandler.py", line 158, in handle_update
+    return await self.callback(update, context)
+  File "bot.py", line 105, in process_ai_question
+    except openai.error.RateLimitError:
+AttributeError: module 'openai' has no attribute 'error'
+2025-03-30 18:54:04,053 - ERROR - No error handlers are registered, logging exception.
+Traceback (most recent call last):
+  File "C:\Users\DANG KHANH\AppData\Local\Programs\Python\Python38\lib\site-packages\telegram\ext\_updater.py", line 753, in _network_loop_retry
+    if not await do_action():
+  File "C:\Users\DANG KHANH\AppData\Local\Programs\Python\Python38\lib\site-packages\telegram\ext\_updater.py", line 747, in do_action
+    return action_cb_task.result()
+  File "C:\Users\DANG KHANH\AppData\Local\Programs\Python\Python38\lib\site-packages\telegram\ext\_updater.py", line 377, in polling_action_cb
+    updates = await self.bot.get_updates(
+  File "C:\Users\DANG KHANH\AppData\Local\Programs\Python\Python38\lib\site-packages\telegram\ext\_extbot.py", line 649, in get_updates
+    updates = await super().get_updates(
+  File "C:\Users\DANG KHANH\AppData\Local\Programs\Python\Python38\lib\site-packages\telegram\_bot.py", line 4366, in get_updates
+    await self._post(
+  File "C:\Users\DANG KHANH\AppData\Local\Programs\Python\Python38\lib\site-packages\telegram\_bot.py", line 623, in _post
+    return await self._do_post(
+  File "C:\Users\DANG KHANH\AppData\Local\Programs\Python\Python38\lib\site-packages\telegram\ext\_extbot.py", line 355, in _do_post
+    return await super()._do_post(
+  File "C:\Users\DANG KHANH\AppData\Local\Programs\Python\Python38\lib\site-packages\telegram\_bot.py", line 652, in _do_post
+    result = await request.post(
+  File "C:\Users\DANG KHANH\AppData\Local\Programs\Python\Python38\lib\site-packages\telegram\request\_baserequest.py", line 201, in post
+    result = await self._request_wrapper(
+  File "C:\Users\DANG KHANH\AppData\Local\Programs\Python\Python38\lib\site-packages\telegram\request\_baserequest.py", line 384, in _request_wrapper
+    raise Conflict(message)
+telegram.error.Conflict: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2025-03-30 18:54:09,475 - ERROR - No error handlers are registered, logging exception.
+Traceback (most recent call last):
+  File "C:\Users\DANG KHANH\AppData\Local\Programs\Python\Python38\lib\site-packages\telegram\ext\_updater.py", line 753, in _network_loop_retry
+    if not await do_action():
+  File "C:\Users\DANG KHANH\AppData\Local\Programs\Python\Python38\lib\site-packages\telegram\ext\_updater.py", line 747, in do_action
+    return action_cb_task.result()
+  File "C:\Users\DANG KHANH\AppData\Local\Programs\Python\Python38\lib\site-packages\telegram\ext\_updater.py", line 377, in polling_action_cb
+    updates = await self.bot.get_updates(
+  File "C:\Users\DANG KHANH\AppData\Local\Programs\Python\Python38\lib\site-packages\telegram\ext\_extbot.py", line 649, in get_updates
+    updates = await super().get_updates(
+  File "C:\Users\DANG KHANH\AppData\Local\Programs\Python\Python38\lib\site-packages\telegram\_bot.py", line 4366, in get_updates
+    await self._post(
+  File "C:\Users\DANG KHANH\AppData\Local\Programs\Python\Python38\lib\site-packages\telegram\_bot.py", line 623, in _post
+    return await self._do_post(
+  File "C:\Users\DANG KHANH\AppData\Local\Programs\Python\Python38\lib\site-packages\telegram\ext\_extbot.py", line 355, in _do_post
+    return await super()._do_post(
+  File "C:\Users\DANG KHANH\AppData\Local\Programs\Python\Python38\lib\site-packages\telegram\_bot.py", line 652, in _do_post
+    result = await request.post(
+  File "C:\Users\DANG KHANH\AppData\Local\Programs\Python\Python38\lib\site-packages\telegram\request\_baserequest.py", line 201, in post
+    result = await self._request_wrapper(
+  File "C:\Users\DANG KHANH\AppData\Local\Programs\Python\Python38\lib\site-packages\telegram\request\_baserequest.py", line 384, in _request_wrapper
+    raise Conflict(message)
+telegram.error.Conflict: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
